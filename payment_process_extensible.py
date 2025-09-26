@@ -21,7 +21,7 @@ class PayPalProcessor: #
         # Example of returning a result (optional)
         # return {"status": "success", "transaction_id": "PP12345"}
 
-class GooglePayProcessor: # No inheritance from ABC
+class GooglePayProcessor: 
     """
     Concrete strategy for GooglePay payments.
     """
@@ -31,7 +31,7 @@ class GooglePayProcessor: # No inheritance from ABC
         # Example of returning a result (optional)
         # return {"status": "success", "transaction_id": "GP67890"}
 
-class CreditCardProcessor: # No inheritance from ABC
+class CreditCardProcessor:
     """
     Concrete strategy for Credit Card payments.
     """
