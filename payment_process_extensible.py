@@ -8,12 +8,9 @@ class PaymentMode(Enum):
     CREDITCARD = 3
     UNKNOWN = 99
 
-# --- 2. Payment Strategy "Interface" (Implicit via Duck Typing) ---
-# We no longer define an explicit abstract base class.
-# Instead, any class that acts as a payment strategy must simply
-# provide a 'process_payment(self, amount: float)' method.
 
-# --- 3. Concrete Payment Strategies ---
+
+# --- 2. Concrete Payment Strategies ---
 class PayPalProcessor: # 
     """
     Concrete strategy for PayPal payments.
@@ -44,7 +41,7 @@ class CreditCardProcessor: # No inheritance from ABC
         # Example of returning a result (optional)
         # return {"status": "success", "transaction_id": "CC11223"}
 
-# --- 4. Payment Context / Dispatcher ---
+# --- 3. Payment Context / Dispatcher ---
 class PaymentProcessorContext:
     """
     The context class that uses a PaymentStrategy to process payments.
