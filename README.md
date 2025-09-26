@@ -120,6 +120,17 @@ if __name__ == "__main__":
     checkout(PaymentMode.CREDITCARD, amount)
     checkout(PaymentMode.UNKNOWN, amount)
 ```
+
+Observation by Loganathan :
+1. When adding new payment method , checkout method must be modified
+2. As the number of payment method grows, checkout function can become very large
+
+To improve extensibility
+1. Define Paymentprocessor interface
+2. Create concrete paymentmode classes that implement the interface
+3. The checkout function would then dispatch to the appropriate processor object based on the PaymentMode which  allows adding new payment processors without modifying the checkout function
+
+
 #### C# Implentation
 ```
 using System;
