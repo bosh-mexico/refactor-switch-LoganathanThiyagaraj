@@ -4,7 +4,7 @@ import sys
 
 # Import from the new module structure
 from payment_system.core.enums import PaymentMode
-from payment_system.core.Paymeny_processor import PaymentProcessorContext
+from payment_system.core.Payment_processor import PaymentProcessorContext
 
 @pytest.mark.parametrize(
     "mode, amount, expected_stdout, expected_stderr",
