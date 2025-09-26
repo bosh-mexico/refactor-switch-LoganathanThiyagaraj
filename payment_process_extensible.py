@@ -18,8 +18,7 @@ class PayPalProcessor: #
     def process_payment(self, amount: float):
         # In a real application, this would call the PayPal API
         print(f"Processing PayPal payment of ${amount:.2f} via PayPal API...")
-        # Example of returning a result (optional)
-        # return {"status": "success", "transaction_id": "PP12345"}
+        
 
 class GooglePayProcessor: 
     """
@@ -28,8 +27,7 @@ class GooglePayProcessor:
     def process_payment(self, amount: float):
         # In a real application, this would call the GooglePay API
         print(f"Processing GooglePay payment of ${amount:.2f} via GooglePay API...")
-        # Example of returning a result (optional)
-        # return {"status": "success", "transaction_id": "GP67890"}
+  
 
 class CreditCardProcessor:
     """
@@ -38,8 +36,7 @@ class CreditCardProcessor:
     def process_payment(self, amount: float):
         # In a real application, this would call a Credit Card gateway API
         print(f"Processing Credit Card payment of ${amount:.2f} via Credit Card Gateway...")
-        # Example of returning a result (optional)
-        # return {"status": "success", "transaction_id": "CC11223"}
+  
 
 # --- 3. Payment Context / Dispatcher ---
 class PaymentProcessorContext:
